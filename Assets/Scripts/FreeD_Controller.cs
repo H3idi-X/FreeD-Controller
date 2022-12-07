@@ -4,6 +4,8 @@ using System.Net;
 using System.Net.Sockets;
 using System.Text;
 using System.Threading;
+
+// 0.0.1
 namespace h3idiX
 {
     [RequireComponent(typeof(Camera))]
@@ -239,6 +241,12 @@ namespace h3idiX
             {
                 return ;
             }
+
+            if (CheckSum(byteData) != byteData[28])
+            {
+                return;
+            }
+            
             if (s_freeD_Controller == null)
             {
                 return ;
@@ -332,5 +340,20 @@ namespace h3idiX
 
             }
         }
+
+        private static int CheckSum(byte[] byteData)
+        {
+            int sum = 64;
+            for (int ii = 0; ii < 28; ii++)
+            {
+                sum -= byteData[ii];
+            }
+
+            int res = sum % 256;
+            if (res < 0)
+                res += 256;
+            return res;
+        }
+        
     }
 }
