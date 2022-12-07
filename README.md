@@ -1,5 +1,7 @@
 # FreeD-Controller
 
+0.0.1
+
 Free D protocol test implementation for Unity.
 You need to input the parameters into the fields in red rectangles.
 
