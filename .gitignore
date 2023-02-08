@@ -2,13 +2,14 @@
 #
 # Get latest from https://github.com/github/gitignore/blob/master/Unity.gitignore
 #
-/[Ll]ibrary/
-/[Tt]emp/
-/[Oo]bj/
-/[Bb]uild/
-/[Bb]uilds/
-/[Ll]ogs/
-/[Mm]emoryCaptures/
+SampleProject~/*/[Ll]ibrary/
+SampleProject~/*/[Tt]emp/
+SampleProject~/*/[Oo]bj/
+SampleProject~/*/[Bb]uild/
+SampleProject~/*/[Bb]uilds/
+SampleProject~/*/[Ll]ogs/
+SampleProject~/*/[Mm]emoryCaptures/
+SampleProject~/*/[Uu]serSettings/
 
 # Asset meta data should only be ignored when the corresponding asset is also ignored
 !/[Aa]ssets/**/*.meta
@@ -21,6 +22,9 @@
 
 # Visual Studio cache directory
 .vs/
+.vsconfig
+.idea/
+InitCodeMarker
 
 # Gradle cache directory
 .gradle/
@@ -42,6 +46,8 @@ ExportedObj/
 *.mdb
 *.opendb
 *.VC.db
+
+Packages/packages-lock.json
 
 # Unity3D generated meta files
 *.pidb.meta
