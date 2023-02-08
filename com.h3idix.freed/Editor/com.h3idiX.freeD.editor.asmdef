@@ -1,0 +1,18 @@
+{
+    "name": "com.h3idiX.freeD.editor",
+    "rootNamespace": "",
+    "references": [
+        "GUID:ec2fe54c0ab82b946b9f83c2142ed542"
+    ],
+    "includePlatforms": [
+        "Editor"
+    ],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

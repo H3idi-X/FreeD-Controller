@@ -1,0 +1,13 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xmlns="UnityEngine.UIElements" ue="UnityEditor.UIElements" editor-extension-mode="True">
+    <ui:GroupBox>
+        <uie:CurveField label="Curve(Pint)&#10;&#10;" name="FocusDistanceCurve" />
+        <ui:ListView virtualization-method="DynamicHeight" reorder-mode="Animated" binding-path="lensFocusData" show-add-remove-footer="true" show-border="true" show-foldout-header="true" header-title="Focus Distance / Pint" name="FocusDistanceListView" />
+    </ui:GroupBox>
+    <ui:GroupBox>
+        <uie:CurveField label="Curve (Zoom)&#10;&#10;" name="FocalLengthCurve" />
+        <ui:ListView virtualization-method="DynamicHeight" reorder-mode="Animated" binding-path="lensFocalData" show-add-remove-footer="true" show-border="true" show-foldout-header="true" header-title="Focal Length / Zoom" name="FocalLengthListView" />
+    </ui:GroupBox>
+    <ui:GroupBox>
+        <ui:ListView virtualization-method="DynamicHeight" reorder-mode="Animated" binding-path="lensOffsetData" show-add-remove-footer="true" show-border="true" show-foldout-header="true" header-title="Position Offset" name="OffsetListView" />
+    </ui:GroupBox>
+</ui:UXML>

@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 146eac061b524f44495d73d420577089
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - editorWindowAsset: {fileID: 9197481963319205126, guid: bba3c6776e43abf44929401e2aec9d47, type: 3}
+  - itemAssetFocalLength: {fileID: 9197481963319205126, guid: 2838f9a81e2db2f4aa1d8015233e1e70, type: 3}
+  - itemAssetFocusDistance: {fileID: 9197481963319205126, guid: 6cd8ae27f69639c489eeb7bffee84977, type: 3}
+  - itemAssetOffset: {fileID: 9197481963319205126, guid: 6b269550dd50f4318a120b75f2e27c99, type: 3}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

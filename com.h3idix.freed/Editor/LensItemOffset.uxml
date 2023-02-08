@@ -1,0 +1,7 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xmlns="UnityEngine.UIElements" ue="UnityEditor.UIElements" editor-extension-mode="True">
+    <ui:VisualElement style="flex-grow: 1; background-color: rgba(0, 0, 0, 0); align-items: stretch; align-self: auto; justify-content: flex-start; flex-direction: row;">
+        <ui:Toggle binding-path="isActive" />
+        <ui:IntegerField binding-path="input" style="flex-grow: 1; max-width: 30%;" />
+        <ui:Vector3Field binding-path="offset" style="flex-direction: row; flex-grow: 1;" />
+    </ui:VisualElement>
+</ui:UXML>

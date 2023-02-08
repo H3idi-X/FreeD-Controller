@@ -1,0 +1,8 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xmlns="UnityEngine.UIElements" ue="UnityEditor.UIElements" editor-extension-mode="True">
+    <ui:Box style="flex-direction: row;">
+        <ui:Toggle binding-path="isActive" />
+        <ui:IntegerField binding-path="input" style="flex-grow: 1;" />
+        <ui:FloatField binding-path="length" style="flex-grow: 1;" />
+        <ui:Label tabindex="-1" text="mm" display-tooltip-when-elided="true" style="align-items: auto; justify-content: flex-start; align-self: flex-end;" />
+    </ui:Box>
+</ui:UXML>

@@ -1,0 +1,38 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" editor-extension-mode="True">
+    <ui:GroupBox>
+        <ui:Image label="Indicator" name="Indicator" />
+        <uie:ObjectField label="Target Camera" name="CameraObjectField" type="UnityEngine.Camera, UnityEngine.CoreModule" binding-path="targetCamera" style="height: 21px; width: 341px;" />
+        <ui:IntegerField label="Local Port" value="0" name="LocalPortIntegerField" binding-path="localPort" />
+        <ui:IntegerField label="Vendor ID" value="0" name="VenderIDIntegerField" binding-path="vendorID" />
+        <ui:IntegerField label="Camera ID" value="0" name="CameraIDIntegerField" binding-path="cameraID" />
+    </ui:GroupBox>
+    <ui:VisualElement style="flex-direction: row; justify-content: flex-start;">
+        <ui:Toggle name="PositionEnabled" binding-path="positionEnabled" style="align-items: auto;" />
+        <ui:Vector3Field label="Position" name="PositionVector3Field" binding-path="freeDPosition" style="flex-grow: 1;" />
+    </ui:VisualElement>
+    <ui:Vector3Field label="Offset" name="PositionOffset" binding-path="positionOffset" style="margin-left: 4px; justify-content: flex-start; left: auto; padding-left: 20px;" />
+    <ui:Vector3Field label="Defalut" name="DefaultPosition" binding-path="defaultPosition" style="margin-left: 4px; justify-content: flex-start; left: auto; padding-left: 20px;" />
+    <ui:Vector3Field label="Rotation" binding-path="freeDRotation" />
+    <ui:VisualElement style="flex-direction: row; justify-content: flex-start;">
+        <ui:Toggle name="FocalLengthEnabled" binding-path="focalLengthEnabled" style="align-items: auto; height: 17px;" />
+        <ui:FloatField label="Zoom" value="0" name="FocalLengthField" binding-path="freeDFocalLength" style="min-width: 80%;" />
+        <ui:Label tabindex="-1" text="mm" display-tooltip-when-elided="true" style="-unity-text-align: lower-left; align-self: auto; align-items: auto; justify-content: flex-start; margin-left: 4px;" />
+    </ui:VisualElement>
+    <ui:VisualElement style="flex-direction: row; justify-content: flex-start;">
+        <ui:Toggle name="FocusDistanceEnabled" binding-path="focusDistanceEnabled" style="align-items: auto;" />
+        <ui:FloatField label="Focus" value="0" name="FocusDistanceField" binding-path="freeDFocusDistance" style="min-width: 80%;" />
+        <ui:Label tabindex="-1" text="m" display-tooltip-when-elided="true" style="-unity-text-align: lower-left; align-items: auto; margin-left: 4px;" />
+    </ui:VisualElement>
+    <ui:Foldout text="Input Data">
+        <ui:Vector3IntField label="Position" binding-path="inputPosition" />
+        <ui:Vector3IntField label="Rotation" binding-path="inputRotation" />
+        <ui:IntegerField label="Zoom" value="0" binding-path="inputFocalLength" />
+        <ui:IntegerField label="Focus" value="0" binding-path="inputFocusDistance" />
+    </ui:Foldout>
+    <ui:VisualElement style="flex-direction: row; justify-content: flex-start;">
+        <uie:ObjectField label="Calibration Data" type="h3idiX.LensData, com.h3idiX.freeD" name="CalibrationData" binding-path="lensData" style="flex-wrap: nowrap; align-items: stretch; justify-content: flex-start; min-width: auto;" />
+        <ui:Button text="new" display-tooltip-when-elided="true" name="CalibrationDataButton" />
+    </ui:VisualElement>
+    <ui:Label tabindex="-1" text="No Lens Calibration Data is assigned." display-tooltip-when-elided="true" name="LabelNoLensDataAssigned" style="color: rgb(255, 0, 0); display: flex; visibility: hidden;" />
+    <ui:Label tabindex="-1" text="Physical Camera must be assigned." display-tooltip-when-elided="true" name="LabelPhysicalCamera" style="color: rgb(255, 0, 0); display: flex; visibility: hidden;" />
+</ui:UXML>
