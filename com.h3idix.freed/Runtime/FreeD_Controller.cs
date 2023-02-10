@@ -227,9 +227,18 @@ namespace h3idiX
                 freeDFocalLength = lensData.focalLengthCurve.Evaluate(inputFocalLength);
             }
 
-            positionOffset.x = lensData.lensOffsetCurves[0].Evaluate(inputFocalLength);
-            positionOffset.y = lensData.lensOffsetCurves[1].Evaluate(inputFocalLength);
-            positionOffset.z = lensData.lensOffsetCurves[2].Evaluate(inputFocalLength);
+            if (lensData.lensOffsetCurves != null)
+            {
+                for (int ii = 0; ii < 3; ii++)
+                {
+                    if (lensData.lensOffsetCurves[ii] == null)
+                    {
+                        continue;
+                    }
+                    positionOffset[ii] = lensData.lensOffsetCurves[ii].Evaluate(inputFocalLength);
+                }
+            }
+
             
             inputFocusDistance = currentFreeD.inputFocus;
             if (lensData.focusDistanceCurve != null)
